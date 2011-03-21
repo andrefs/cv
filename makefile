@@ -1,7 +1,8 @@
 E=cv_en
 P=cv_pt
 B=aspubs
-L=motiv_letter
+M=motiv_letter_en
+L=motiv_letter_pt
 
 all: en pt let
 
@@ -15,9 +16,13 @@ pt: $P.tex foto.jpg makefile
 	bibtex $P
 	pdflatex $P.tex
 
-let: $L.tex
+ptlet: $L.tex
 	pdflatex $L.tex
 	pdflatex $L.tex
+
+enlet: $M.tex
+	pdflatex $M.tex
+	pdflatex $M.tex
 
 check:
 	aspell -l en -c -t *.tex
