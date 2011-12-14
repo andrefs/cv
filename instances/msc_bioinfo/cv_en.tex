@@ -5,7 +5,7 @@
 \usepackage[portuguese,english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage{a4wide}
+\usepackage{a4wide}
 \usepackage{txfonts}% use Arial && Times New Roman
 \usepackage[pdftex]{color,graphicx}
 \usepackage{fancyhdr}
@@ -18,7 +18,6 @@
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage{url}
-\usepackage{multicol}
 
 \renewcommand\familydefault{\sfdefault}% usar font sem serifas
 \renewcommand{\labelitemi}{$-$}
@@ -28,60 +27,49 @@
 
 \begin{document}
 \maketitle
-%\thispagestyle{empty}
+\thispagestyle{empty}
 
-%\newpage
+\newpage
 \section{Personal Information}
 	\begin{description}
-	\item [Name:] \large\textbf{\textsc{André Fernandes dos Santos}}
-	\end{description}
-\begin{multicols}{2}
-	\begin{description}
 	%\item [Nome:] \framebox{\textsc{André Fernandes dos Santos}}
+	\item [Name:] \textbf{\textsc{André Fernandes dos Santos}}
 	\item [Birthdate:] 24 February 1988
-	\item [Address:] Pq. Resid. Fonte Seca,\\Lt8B 1$\,^{\circ}$E, 4715-229 BRAGA
+	\item [Address:] Pq. Resid. Fonte Seca, Lt8B 1$\,^{\circ}$E, 4715-229 BRAGA
 	\item [Civil state:] Single
 	\item [Mobile number:] +351 92 77 15 379
 	\item [Email:] pg15973@alunos.uminho.pt
 	\end{description}
-	\vfill
 
-	\columnbreak
 %	\begin{figure}[htbp]
 %	\centering
 %	\includegraphics[width=.1\textwidth]{foto}
 %	\end{figure}
 
+	\vspace{.2cm}
 	\begin{description}
-		\small
 		\item [Twitter:] \texttt{@about\_andrefs} 
 		\item [GitHub:] \url{github.com/andrefs} 
 		\item [LinkedIn:] \url{linkedin.com/in/andrefs}
 		\item [SlideShare:] \url{slideshare.net/andrefsantos}
 	\end{description}
-	\vspace*{\fill}
-\end{multicols}
 
 
 \section{Education}
-%\begin{description}
-\begin{tabular}{p{.18\textwidth}p{.8\textwidth}}
-\textbf{2010-present} & MSc in Bioinformatics, University of Minho \newline
-                       120 ECTS                                               \\
-\textbf{2009-2011} & MSc in Natural Language Processing, University of Minho \newline
-                     120 ECTS -- final grade 17/20                           \vspace{.2cm}\newline
-                     Master thesis: ``Building a Corpora-Flow System''       \newline
-                     {\small\textit{Development of a system to support automatic handling of corpora (cleaning, validation, format conversion), document alignment and estimate the alignability of several types of documents, as well as make them available on the internet.}}\\
-\textbf{2006-2009} & BSc in Software Engineering, University of Minho        \newline
-                     180 ECTS, final grade 15/20                             \\
-\end{tabular}
-%	\begin{itemize}
-%		\item Languages Engineering (final grade 16/20)
-%		\item Bioinformatics (final grade 16/20)
-%		\item Master thesis: ``Building a Corpora-Flow System''\\
-%		
-%	\end{itemize}
-%\end{description}
+\begin{description}
+\item [2006-2009] Degree in Software Engineering, University of Minho (180 ECTS, final grade 14.56/20.00)
+\item [2009/2010] 1${^\textrm{st}}$ year of Software Engineering MSc, University of Minho (120 ECTS)
+	\begin{itemize}
+		\item Languages Engineering (final grade 16/20)
+		\item Bioinformatics (final grade 16/20)
+	\end{itemize}
+\item [2010/2011] Advanced Bioinformatics and Systems Biology (extracurricular subject, 30 ECTS)
+\item [2010/present] 2${^\textrm{nd}}$ year of Software Engineering MSc, University of Minho
+	\begin{itemize}
+		\item Master thesis: ``Building a Corpora-Flow System''\\
+		Development of a system to support automatic handling of corpora (cleaning, validation, format conversion), document alignment and estimate the alignability of several types of documents, as well as make them available on the internet.
+	\end{itemize}
+\end{description}
 
 \section {Training}
 \begin {description}
