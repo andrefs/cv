@@ -1,24 +1,34 @@
 %!TEX TS-program = xelatex
-%\documentclass[print]{friggeri-cv}
-\documentclass{friggeri-cv}
+%\documentclass[print,a4paper]{friggeri-cv}
+\documentclass[a4paper]{friggeri-cv}
 \addbibresource{aspubs.bib}
 
 \begin{document}
 \header{andré}{santos}
-       {}
+       {nlp, webdev and sysadmin}
 
 
 % In the aside, each new line forces a line break
 \begin{aside}
   \section{about}
+  	{\scriptsize address}
   	Pq. Resid. Fonte Seca
 	LT 8B 1oE
 	4715-229 Braga
 	Portugal
+  	{\scriptsize phone}
 	+351 927 715 379
     ~
-    \href{mailto:andrefs@andrefs.pt}{andrefs@andrefs.pt}
-    \href{http://andrefs.pt}{http://andrefs.pt}
+  	{\scriptsize mail}
+    \href{mailto:andrefs@andrefs.pt}{\small andrefs@andrefs.pt}
+  	{\scriptsize homepage}
+    \href{http://andrefs.pt}{\small http://andrefs.pt}
+  	{\scriptsize twitter}
+    \href{http://twitter.com/about\_andrefs}{\small @about\_andrefs}
+  	{\scriptsize github}
+    \href{http://github.com/andrefs}{\small andrefs}
+  	{\scriptsize cpan}
+    \href{http://search.cpan.org/~andrefs}{andrefs}
   \section{languages}
   	native portuguese
 	fluent english
@@ -122,7 +132,6 @@ bioinformatics
 %    {\emph{Development of an e-commerce product indexation spider.}}
 \end{entrylist}
 
-\newpage
 \section{technical skills}
 \begin{entrylist}
 	\entry
@@ -142,12 +151,14 @@ bioinformatics
 		{Ontologies and structured documents}
 		{Experienced}
 		{XML, XQuery, XPath, JSON and ontology formats: OWL,\\
-		OBO, RDF, \dots}
+		OBO, RDF.}
+\end{entrylist}
+\begin{entrylist}
 	\entry
 		{}
 		{Systems administration, programming tools and methods}
 		{Experienced}
-		{Bash, Subversion, Git, Apache, Agile.}
+		{Bash, Subversion, Git, \LaTeX, Apache, Agile.}
 	\entry
 		{}
 		{Other programming languages}
