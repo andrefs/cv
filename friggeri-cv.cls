@@ -26,6 +26,11 @@
 \definecolor{purple}{HTML}{D3A4F9}
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
+\definecolor{teal}{HTML}{008080}
+
+\definecolor{darkblue}{HTML}{483D8B}
+\definecolor{darkgreen}{HTML}{32CD32}
+\definecolor{darkred}{HTML}{8B0000}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -33,6 +38,10 @@
   \colorlet{purple}{gray}
   \colorlet{red}{gray}
   \colorlet{blue}{gray}
+  \colorlet{teal}{gray}
+  \colorlet{darkblue}{gray}
+  \colorlet{darkgreen}{gray}
+  \colorlet{darkred}{gray}
   \colorlet{fillheader}{white}
   \colorlet{header}{gray}
 \else
@@ -99,9 +108,13 @@
       \ifcase\value{colorCounter}%
         blue\or%
         red\or%
+		teal\or%
         orange\or%
         green\or%
-        purple\else%
+        purple\or%
+        darkblue\or%
+        darkgreen\or%
+        darkred\else%
         headercolor\fi%
     } #1#2#3%
   }%
@@ -118,10 +131,25 @@
 }
 
 \renewcommand{\subsection}[2]{
-  \par\vspace{.5\parskip}%
-  \Large\headingfont\color{headercolor} #2%
-  \par\vspace{.25\parskip}%
+  \par\vspace{.5\parskip}
+  {%
+  	\Large\headingfont\color{headercolor}
+  	\ifblank{#2}{#1}{#2\space}%
+  }
+  \par\vspace{.25\parskip}
 }
+
+
+
+% \renewcommand{\subsection}[1]{
+%   \par\vspace{.5\parskip}%
+%   {%
+%     \Large\headingfont\color{headercolor}%
+%     #1%
+%   }
+%   \par\vspace{.25\parskip}%
+% }
+
 
 \pagestyle{empty}
 
@@ -172,12 +200,13 @@
 % Bibliography %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[style=verbose, maxnames=99, sorting=ydnt]{biblatex}
+\RequirePackage[style=verbose,maxnames=99,sorting=ydnt]{biblatex}
 
 \DeclareFieldFormat[article]{title}{#1\par}
 \DeclareFieldFormat[inproceedings]{title}{#1\par}
 \DeclareFieldFormat[misc]{title}{#1\par}
 \DeclareFieldFormat[report]{title}{#1\par}
+\DeclareFieldFormat[thesis]{title}{#1\par}
 
 \DeclareBibliographyDriver{article}{%
   \printfield{title}%
@@ -225,7 +254,7 @@
   \newblock%
   {%
     \footnotesize\addfontfeature{Color=lightgray}\itshape%
-    \printfield{booktitle}%
+    \printfield{howpublished}%
     \setunit*{\addcomma\space}%
     \printfield{note}%
     \setunit*{\addcomma\space}%
@@ -255,6 +284,24 @@
   \par\vspace{0.3\baselineskip}
 }
 
+\DeclareBibliographyDriver{thesis}{%
+  \printfield{title}%
+  \newblock%
+  \printnames{author}%
+  \par%
+  \newblock%
+  {%
+    \footnotesize\addfontfeature{Color=lightgray}\itshape%
+    \printfield{type}%
+    \setunit{\addcomma\space}%
+    \printlist{institution}%
+    \setunit*{\addcomma\space}%
+    \printfield{year}%
+    \newunit%
+  }
+  \par\vspace{0.3\baselineskip}
+}
+
 \DeclareNameFormat{author}{%
   \small\addfontfeature{Color=lightgray}%
   \ifblank{#3}{}{#3\space}#1%
@@ -266,14 +313,10 @@
 \newcommand{\printbibsection}[2]{
   \begin{refsection}
     \nocite{*}
-    \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=subbibliography]
+    \printbibliography[type={#1}, title={#2}, heading=subbibliography]
   \end{refsection}
 }
 
-\DeclareSortingScheme{chronological}{
-  \sort[direction=descending]{\field{year}}
-  \sort[direction=descending]{\field{month}}
-}
 
 
 
