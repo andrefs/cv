@@ -1,7 +1,12 @@
 \ProvidesClass{friggeri-cv}[2012/04/30 CV class]
 \NeedsTeXFormat{LaTeX2e}
 
+%% \DeclareOption{print}{\def\grayflag{}}
+%% \DeclareOption{printbw}{\def\bwflag{}}
+
 \DeclareOption{print}{\def\@cv@print{}}
+\DeclareOption{printbw}{\def\@cv@printbw{}}
+
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
 }
@@ -31,25 +36,89 @@
 \definecolor{darkblue}{HTML}{483D8B}
 \definecolor{darkgreen}{HTML}{32CD32}
 \definecolor{darkred}{HTML}{8B0000}
+\definecolor{black}{RGB}{0,0,0}
+
+
+%%%  % Print black and white
+%%%  \ifdefined\bwflag
+%%%      \colorlet{green}{black}
+%%%      \colorlet{orange}{black}
+%%%      \colorlet{purple}{black}
+%%%      \colorlet{red}{black}
+%%%      \colorlet{blue}{black}
+%%%      \colorlet{teal}{black}
+%%%      \colorlet{darkblue}{black}
+%%%      \colorlet{darkgreen}{black}
+%%%      \colorlet{darkred}{black}
+%%%      \colorlet{lightgray}{black}
+%%%      \colorlet{fillheader}{white}
+%%%      \colorlet{header}{black}
+%%%      \colorlet{textcolor}{black}
+%%%      \colorlet{headercolor}{black}
+%%%  \else
+%%%  % Print gray
+%%%  	\ifdefined\grayflag
+%%%  		\colorlet{green}{gray}
+%%%  		\colorlet{orange}{gray}
+%%%  		\colorlet{purple}{gray}
+%%%  		\colorlet{red}{gray}
+%%%  		\colorlet{blue}{gray}
+%%%  		\colorlet{teal}{gray}
+%%%  		\colorlet{darkblue}{gray}
+%%%  		\colorlet{darkgreen}{gray}
+%%%  		\colorlet{darkred}{gray}
+%%%  		\colorlet{fillheader}{white}
+%%%  		\colorlet{header}{gray}
+%%%  		\colorlet{textcolor}{gray}
+%%%  		\colorlet{headercolor}{gray}
+%%%  % Print color
+%%%  	\else
+%%%  		\colorlet{fillheader}{gray}
+%%%  		\colorlet{header}{white}
+%%%  		\colorlet{textcolor}{gray}
+%%%  		\colorlet{headercolor}{gray}
+%%%  	\fi
+%%%  \fi
+
 
 \ifdefined\@cv@print
-  \colorlet{green}{gray}
-  \colorlet{orange}{gray}
-  \colorlet{purple}{gray}
-  \colorlet{red}{gray}
-  \colorlet{blue}{gray}
-  \colorlet{teal}{gray}
-  \colorlet{darkblue}{gray}
-  \colorlet{darkgreen}{gray}
-  \colorlet{darkred}{gray}
-  \colorlet{fillheader}{white}
-  \colorlet{header}{gray}
+	\colorlet{green}{gray}
+	\colorlet{orange}{gray}
+	\colorlet{purple}{gray}
+	\colorlet{red}{gray}
+	\colorlet{blue}{gray}
+	\colorlet{teal}{gray}
+	\colorlet{darkblue}{gray}
+	\colorlet{darkgreen}{gray}
+	\colorlet{darkred}{gray}  
+	\colorlet{fillheader}{white}
+	\colorlet{header}{gray}
+	\colorlet{textcolor}{gray}
+	\colorlet{headercolor}{gray}
 \else
-  \colorlet{fillheader}{gray}
-  \colorlet{header}{white}
+	\ifdefined\@cv@printbw
+		\colorlet{green}{black}
+		\colorlet{orange}{black}
+		\colorlet{purple}{black}
+		\colorlet{red}{black}
+		\colorlet{blue}{black}
+		\colorlet{teal}{black}
+		\colorlet{darkblue}{black}
+		\colorlet{darkgreen}{black}
+		\colorlet{darkred}{black}
+		\colorlet{lightgray}{black}
+		\colorlet{fillheader}{white}
+		\colorlet{header}{black}
+		\colorlet{textcolor}{black}
+		\colorlet{headercolor}{black}
+	\else
+		\colorlet{fillheader}{gray}
+		\colorlet{header}{white}
+		\colorlet{textcolor}{gray}
+		\colorlet{headercolor}{gray}
+	\fi
 \fi
-\colorlet{textcolor}{gray}
-\colorlet{headercolor}{gray}
+
 
 %%%%%%%%%
 % Fonts %
