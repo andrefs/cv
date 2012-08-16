@@ -4,7 +4,7 @@ B=aspubs
 all: en
 
 en: $E.tex makefile
-	latexmk -bibtex -xelatex $E.tex
+	latexmk -bibtex -enc -etex -xelatex $E.tex
 #	mv $E.pdf $E_color.pdf
 
 # print: $E.tex makefile
