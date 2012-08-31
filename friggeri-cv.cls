@@ -242,6 +242,9 @@
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{headercolor} ##1}
   }
+  \renewcommand{\subsection}[1]{
+    \par\vspace{0.2\baselineskip}{\scriptsize\headingfont\color{headercolor} ##1}
+  }
   \begin{textblock}{3.6}(1.5, 4.33)
   \begin{flushright}
   \obeycr
