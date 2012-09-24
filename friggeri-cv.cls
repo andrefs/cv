@@ -6,6 +6,7 @@
 
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption{printbw}{\def\@cv@printbw{}}
+\DeclareOption{web}{\def\@cv@web{}}
 
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
@@ -385,3 +386,18 @@
 
 \RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Hide sensitive information in Web mode   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{comment}
+\ifdefined\@cv@web
+	\excludecomment{sensitive}
+\else
+	\includecomment{sensitive}
+\fi
+
+
