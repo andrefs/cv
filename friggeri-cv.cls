@@ -128,14 +128,14 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
 
-\newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
-\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\newfontfamily\bodyfont[Path=./fonts/HelveticaNeue/]{HelveticaNeue}
+\newfontfamily\thinfont[Path=./fonts/HelveticaNeue/]{HelveticaNeueUltraLight}
+\newfontfamily\headingfont[Path=./fonts/HelveticaNeue/]{HelveticaNeueCondensedBold}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
+\setmainfont[Mapping=tex-text, Color=textcolor, Path=./fonts/HelveticaNeue/]{HelveticaNeueLight}
 
-\setmonofont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
+\setmonofont[Mapping=tex-text, Color=textcolor, Path=./fonts/HelveticaNeue/]{HelveticaNeueLight}
 \setmathfont{XITS Math}
 
 %%%%%%%%%%
@@ -177,11 +177,11 @@
   {%
     \color{%
       \ifcase\value{colorCounter}%
-        blue\or%
-        red\or%
 		teal\or%
         orange\or%
         green\or%
+        blue\or%
+        red\or%
         purple\or%
         darkblue\or%
         darkgreen\or%

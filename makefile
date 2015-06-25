@@ -4,8 +4,11 @@ B=aspubs
 all: en
 
 en: $E.tex makefile
-	latexmk -bibtex -enc -etex -xelatex $E.tex
-#	mv $E.pdf $E_color.pdf
+	latexmk -bibtex -enc -etex -lualatex $E.tex
+	#lualatex  $E.tex
+
+	#latexmk -bibtex -enc -etex -xelatex $E.tex
+	#mv $E.pdf $E_color.pdf
 
 # print: $E.tex makefile
 # 	#latexmk -bibtex -xelatex  -latex="\def\grayflag{}\input{$E.tex}"
@@ -18,4 +21,4 @@ en: $E.tex makefile
 # 	mv $E.pdf $E_bw.pdf
 
 clean:
-	rm -rf *.aux *.bbl *.blg *.log *.out *_latexmk *-blx.bib *.fls *.run.xml
+	rm -rf *.aux *.bbl *.blg *.log *.out *_latexmk *-blx.bib *.fls *.run.xml *.cut
