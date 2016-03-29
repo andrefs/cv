@@ -1,9 +1,9 @@
 %!TEX TS-program = xelatex
 %\documentclass[print,a4paper]{friggeri-cv}
-\documentclass[a4paper,printbw]{friggeri-cv}
+%\documentclass[a4paper,printbw]{friggeri-cv}
 %\documentclass[a4paper,print]{friggeri-cv}
 %\documentclass[a4paper,web]{friggeri-cv}
-%\documentclass[a4paper]{friggeri-cv}
+\documentclass[a4paper]{friggeri-cv}
 \addbibresource{aspubs.bib}
 
 \begin{document}
@@ -17,43 +17,56 @@
   \section{about}
 \begin{sensitive}
     \subsection{address}
-%    Pq. Resid. Fonte Seca
-%    LT 8B 1oE
-%    4715-229 Braga
-%    Portugal
-    Rua Capitão Renato Baptista,
+    {\small R. Cap. Renato Baptista,
     n 50, 3 DIR
-    1040-087 Lisbon
-    Portugal
-%    Av. Praia da Vitória,
-%    n 5, 4 DIR
-%    1000-245 Lisbon
-%    Portugal
+    1150-087 Lisbon
+    Portugal}
     \subsection{phone}
     +351 927 715 379
     \subsection{birth date}
     24 Fev 1988
 \end{sensitive}
-    \subsection{website}
+    \subsection{contacts}
     \url{andrefs.com}
-    \subsection{projects}
-    \url{github.com/andrefs}
-    \subsection{mail}
-    \href{mailto:cv@andrefs.com}{cv@andrefs.com}
-    \subsection{twitter}
-    \href{http://witter.com/about_andrefs}{@about\_andrefs}
+    \url{github.com/andrefs} \faGithub
+    \href{mailto:cv@andrefs.com}{cv@andrefs.com} \faEnvelope
+    \href{http://witter.com/about_andrefs}{@about\_andrefs} \faTwitter
   \section{languages}
     native portuguese
     fluent english
     basic spanish+french
   \section{favorite tools}
-    {$\varheartsuit$} Node.js, Perl, Git
+    {$\varheartsuit$} Node.js, Perl, Git, MongoDB
 \end{aside}
 
 \section{interests}
-
-{\large{web, open source software, Node.js, Perl, natural language
+{\large{web, open source, Linux, Node.js, Perl, natural language
 processing, information retrieval, bioinformatics}}
+
+\section{technical skills}
+
+\begin{entrylist}
+    \entry
+        {Languages}
+        {Node.js, JavaScript and Perl}
+        {}
+        {\small Also Haskell, \LaTeX}
+    \entry
+        {Databases}
+        {MongoDB}
+        {}
+        {\small Also MySQL, PostgreSQL, ElasticSearch}
+    \entry
+    {\parbox[t][][t]{2.3cm}{Frameworks\\{\small and libraries}}}
+        {Express, Dancer}
+        {}
+        {\small Also React, Mocha, Chai, Sinon}
+    \entry
+        {Other tools}
+        {Git, Bash}
+        {}
+        {}
+\end{entrylist}
 
 \section{experience}
 \begin{entrylist}
@@ -110,39 +123,10 @@ processing, information retrieval, bioinformatics}}
     Development of natural language processing tools to help in general\\
     orthography migration challenges, motivated by the 1990 Portuguese\\
     Language Orthographic Agreement.\\
-    \url{http://softwarelivre.sapo.pt/projects/bigorna/}}}
+    \url{http://natura.di.uminho.pt/wiki/doku.php?id=ferramentas:bigorna}}}
 \end{entrylist}
 
 
-\section{technical skills}
-\begin{entrylist}
-    \entry
-        {}
-        {Node.js}
-        {Experienced}
-        {Express.js and custom-made web frameworks, ORMs,\\ templating systems, \dots\\
-        \footnotesize{\url{https://www.npmjs.com/~andrefs}}}
-    \entry
-        {}
-        {Perl}
-        {Proficient}
-        {Including Moose, Dancer, Text::More and\\
-        other Modern::Perl concepts.\\
-        \footnotesize{\url{https://metacpan.org/author/ANDREFS}}}
-    \entry
-        {}
-        {Web development}
-        {Proficient}
-        {Both server-side and client-side technologies:\\
-        Node.js, Perl, Javascript, CSS}
-\end{entrylist}
-\begin{entrylist}
-    \entry
-        {}
-        {Other competences and interests}
-        {}
-        {Git, \LaTeX, Bash, Haskell, IoT, ElasticSearch, ontologies and structured formats}
-\end{entrylist}
 
 \newpage
 \section{education}
@@ -175,7 +159,8 @@ processing, information retrieval, bioinformatics}}
     {2006--2009}
     {BSc in Software Engineering}
     {University of Minho, Portugal}
-    {180 ECTS, final grade 15/20}
+    {{\footnotesize Typical CompSci course}\\
+    180 ECTS, final grade 15/20}
 \end{entrylist}
 
 
@@ -284,7 +269,7 @@ processing, information retrieval, bioinformatics}}
     {}
 \end{entrylist}
 
-%\newpage
+\newpage
 \section{publications}
 \printbibsection{article}{articles in peer-reviewed journal}
 

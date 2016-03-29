@@ -127,6 +127,7 @@
 
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage{fontawesome}
 
 \newfontfamily\bodyfont[Path=./fonts/HelveticaNeue/]{HelveticaNeue}
 \newfontfamily\thinfont[Path=./fonts/HelveticaNeue/]{HelveticaNeueUltraLight}
