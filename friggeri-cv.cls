@@ -20,6 +20,8 @@
 %%%%%%%%%%
 
 \RequirePackage{xcolor}
+\RequirePackage{changepage}
+\RequirePackage{nameref}
 
 \definecolor{white}{RGB}{255,255,255}
 
@@ -91,7 +93,7 @@
 	\colorlet{teal}{gray}
 	\colorlet{darkblue}{gray}
 	\colorlet{darkgreen}{gray}
-	\colorlet{darkred}{gray}  
+	\colorlet{darkred}{gray}
 	\colorlet{fillheader}{white}
 	\colorlet{header}{gray}
 	\colorlet{textcolor}{gray}
@@ -224,12 +226,16 @@
   \end{tabular*}
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
-\newcommand{\entry}[4]{%
+\newcommand{\entry}[5]{%
   #1&\parbox[t]{11.3cm}{%
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=lightgray} #3}\\%
-    #4\vspace{\parsep}%
+    #4
+    \begin{adjustwidth}{0.3cm}{}
+    {\footnotesize#5}%
+    \end{adjustwidth}
+    \vspace{\parsep}
   }\\}
 
 
@@ -382,7 +388,7 @@
 \newcommand{\printbibsection}[2]{
   \begin{refsection}
     \nocite{*}
-    \printbibliography[type={#1}, title={#2}, heading=subbibliography]
+    \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=subbibliography]
   \end{refsection}
 }
 
