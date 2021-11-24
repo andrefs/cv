@@ -416,3 +416,5 @@
 \fi
 
 
+\RequirePackage{emoji}
+
